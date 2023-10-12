@@ -22,7 +22,7 @@ The following code demonstrates how I created a SQL query to filter for failed l
 <img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
 <br /><br/>
 <p align="left">
-  The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00. 
+ <b>The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00.<br/> </b>
 <br/>•	First, I started by selecting all data from the log_in_attempts table. 
 <br/>•	Then, I used a WHERE clause with an AND operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. 
 <br/>•	The first condition is login_time > '18:00', which filters for the login attempts that occurred after 18:00. 
@@ -37,7 +37,7 @@ The following code demonstrates how I created a SQL query to filter for failed l
 <img src="https://i.imgur.com/acVQ91Y.png" height="100%" width="100%"/>
 <br />
 <p align="left">
-  The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08.  
+<b>The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08.</b><br/>
 <br/>•	First, I started by selecting all data from the log_in_attempts table. 
 <br/>•	Then, I used a WHERE clause with an OR operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. 
 <br/>•	The first condition is login_date = '2022-05-09', which filters for logins on 2022-05-09.  
@@ -46,28 +46,27 @@ The following code demonstrates how I created a SQL query to filter for failed l
 <h2>Retrieve login attempts outside of Mexico:</h2>
 
 <p align="left">
-There was a potential security incident that occurred after business hours (after 18:00). All after hours login attempts that failed need to be investigated.
-The following code demonstrates how I created a SQL query to filter for failed login attempts that occurred after business hours.
+After investigating the organization’s data on login attempts, I believe there is an issue with the login attempts that occurred outside of Mexico. These login attempts should be investigated.
+The following code demonstrates how I created a SQL query to filter for login attempts that occurred outside of Mexico. 
 <br/><br/>
-<img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
+<img src="https://i.imgur.com/MLuuj1X.png" height="100%" width="100%"/>
 <br /><br/>
 <p align="left">
-  The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00. 
+<b>The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred in countries other than Mexico. </b><br/>
 <br/>•	First, I started by selecting all data from the log_in_attempts table. 
-<br/>•	Then, I used a WHERE clause with an AND operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. 
-<br/>•	The first condition is login_time > '18:00', which filters for the login attempts that occurred after 18:00. 
-<br/>•	The second condition is success = FALSE, which filters for the failed login attempts. 
-
+<br/>•	Then, I used a WHERE clause with NOT to filter for countries other than Mexico. I used LIKE with MEX% as the pattern to match because the dataset represents Mexico as MEX and MEXICO. 
+<br/>•	The percentage sign (%) represents any number of unspecified characters when used with LIKE. 
+  
 <h2>Retrieve employees in Marketing:</h2>
 
 <p align="left">
 My team wants to update the computers for certain employees in the Marketing department. To do this, I have to get information on which employee machines to update.
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Marketing department in the East building.
 <br/><br/>
-<img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
+<img src="https://i.imgur.com/NCPQFrJ.png" height="100%" width="100%"/>
 <br /><br/>
 <p align="left">
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Marketing department in the East building.
+<b>The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Marketing department in the East building.</b><br/>
 <br/>•	First, I started by selecting all data from the employees table. 
 <br/>•	Then, I used a WHERE clause with AND to filter for employees who work in the Marketing department and in the East building. 
 <br/>•  I used LIKE with East% as the pattern to match because the data in the office column represents the East building with the specific office number. 
@@ -80,10 +79,10 @@ The first part of the screenshot is my query, and the second part is a portion o
 The machines for employees in the Finance and Sales departments also need to be updated. Since a different security update is needed, I have to get information on employees only from these two departments.
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Finance or Sales departments.
 <br/><br/>
-<img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
+<img src="https://i.imgur.com/byseRn1.png" height="100%" width="100%"/>
 <br /><br/>
 <p align="left">
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments. 
+<b>The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments. </b><br/>
 <br/>•	First, I started by selecting all data from the employees table. Then, I used a WHERE clause with OR to filter for employees who are in the Finance and Sales departments.
 <br/>•	I used the OR operator instead of AND because I want all employees who are in either department. 
 <br/>•	The first condition is department = 'Finance', which filters for employees from the Finance department. 
@@ -95,14 +94,15 @@ The first part of the screenshot is my query, and the second part is a portion o
 My team needs to make one more security update on employees who are not in the Information Technology department. To make the update, I first have to get information on these employees.
 The following demonstrates how I created a SQL query to filter for employee machines from employees not in the  Information Technology department
 <br/><br/>
-<img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
+<img src="https://i.imgur.com/yecfC9e.png" height="100%" width="100%"/>
 <br /><br/>
 <p align="left">
-  The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. 
+<b> The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. </b><br/>
 <br/>•	First, I started by selecting all data from the employees table. 
 <br/>•	Then, I used a WHERE clause with NOT to filter for employees not in this department.
 <br/>
-Summary
+  
+<b>Summary</b>
 I applied filters to SQL queries to get specific information on login attempts and employee machines. 
 <br/>•	I used two different tables, log_in_attempts and employees. 
 <br/>•	I used the AND, OR, and NOT operators to filter for the specific information needed for each task. 
