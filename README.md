@@ -100,10 +100,10 @@ The following demonstrates how I created a SQL query to filter for employee mach
 <b> The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. </b><br/>
 <br/>•	First, I started by selecting all data from the employees table. 
 <br/>•	Then, I used a WHERE clause with NOT to filter for employees not in this department.
-<br/>
+<br/><br/>
   
 <b>Summary</b>
-I applied filters to SQL queries to get specific information on login attempts and employee machines. 
+<br/>I applied filters to SQL queries to get specific information on login attempts and employee machines. 
 <br/>•	I used two different tables, log_in_attempts and employees. 
 <br/>•	I used the AND, OR, and NOT operators to filter for the specific information needed for each task. 
 <br/>•	I also used LIKE and the percentage sign (%) wildcard to filter for patterns.
