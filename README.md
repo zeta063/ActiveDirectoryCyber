@@ -33,9 +33,8 @@ The following code demonstrates how I created a SQL query to filter for failed l
 <p align="left">
 <br/>A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
 <br/>The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
-<br/>
-  
-<img src="https://i.imgur.com/PG18fJx.png" height="100%" width="100%"/>
+<br/><br/>
+<img src="https://i.imgur.com/acVQ91Y.png" height="100%" width="100%"/>
 <br />
 <p align="left">
   The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08.  
